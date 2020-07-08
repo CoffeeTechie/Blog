@@ -1,12 +1,19 @@
 import React from "react";
-import Logo from "../components/Logo";
+import ReactDOM from "react-dom";
+import { BrowserRouter as Router } from "react-router-dom";
+
+import { NavBar } from "../components";
+
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
-    <div>
-      <Logo />
-    </div>
+    <Router>
+      <NavBar />
+    </Router>
   );
 }
+
+ReactDOM.render(<App />, document.getElementById("root"));
 
 export default App;

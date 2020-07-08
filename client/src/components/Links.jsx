@@ -2,8 +2,10 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
+//collapse?
+
 const Collapse = styled.div.attrs({
-  className: "collapse navbar-collapse",
+  className: "navbar",
 })``;
 
 const List = styled.div.attrs({
@@ -11,26 +13,27 @@ const List = styled.div.attrs({
 })``;
 
 const Item = styled.div.attrs({
-  className: "collapse navbar-collapse",
+  className: "navbar",
 })``;
 
 class Links extends Component {
   render() {
     return (
-      <React.Fragment>
-        <Link to="/" className="navbar-brand">
-          Mel's Blog
-        </Link>
+      <React.Fragment className="d-flex">
         <Collapse>
+          <Link to="/" className="navbar-brand mr-auto p-2">
+            Mel's Blog
+          </Link>
           <List>
             <Item>
-              <Link to="/posts/list" className="nav-link">
+              <Link to="/posts/list" className="nav-link pr-2">
                 List posts
               </Link>
             </Item>
+
             <Item>
-              <Link to="/comment/create" className="nav-link">
-                Comment?
+              <Link to="/post/create" className="nav-link p-2">
+                Create post?
               </Link>
             </Item>
           </List>
