@@ -9,7 +9,8 @@ const Container = styled.div.attrs({
 })``;
 
 const Nav = styled.nav.attrs({
-  className: "navbar navbar-dark bg-dark",
+  className:
+    "navbar navbar-expand-sm navbar-light navbar-nav collapse.navbar-collapse bg-light",
 })`
   margin-bottom: 20px;
 `;
